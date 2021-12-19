@@ -36,7 +36,7 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now fallen into a deep sleep!{}".format(
+        update.effective_message.reply_text("{} is truly the lowest scumm in history!{}".format(
             fname, notice))
     except BadRequest:
         pass
@@ -57,9 +57,9 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                '{} the pro is back!', '{} why came back!', '{} is here\nTo make trouble!', '{} is reincarnated!',
-                '{} do not trash the chat!', '{} go back!', '{} be gentle to all!',
-                'Get doomed! {}', 'Go sleep {}', 'Yamete...Yamete-kudasai {}-sama', '{} was busy with his gf', '{} bas vapas jaa'
+                '{} is here to do some Ora Ora!', '{} is back with his disappointing face to fuel our anger!', '{} is here\nTo make trouble!', 'Kono {} Daaa!!!',
+                '{} do not trash the chat!', '{} go back!', '{} is going to cry like a baby!',
+                'Get doomed! {}', 'Go sleep {}', 'Yamete...Yamete-kudasai {}-sama', '{} was busy with his gf', 'Mona Lisa's hands gave {} an erection'
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
